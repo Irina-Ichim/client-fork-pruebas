@@ -1,6 +1,8 @@
+import daisyui from 'daisyui';
+
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  plugins: [require("daisyui")],
+const config = {
+  plugins: [daisyui],
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
@@ -14,8 +16,7 @@ module.exports = {
       subtitleText: ['Roboto', 'sans-serif'],
       bodyText: ['Roboto', 'sans-serif']
     },
-    
-    fontSize:{
+    fontSize: {
       heading1: "6rem",
       heading2: "4rem",
       heading3: "3.5rem",
@@ -30,7 +31,6 @@ module.exports = {
       body3: "1rem",
       body4: "0.875rem"
     },
-
     extend: {
       colors: {
         'primaryColor': '#4737BB',
@@ -56,7 +56,7 @@ module.exports = {
         'errorColorLight': '#F9D4CE',
       },
       button: {
-        sizes:{
+        sizes: {
           largeButton: {
             width: '28.125rem',
             padding: '0.5rem 1rem',
@@ -86,10 +86,13 @@ module.exports = {
             fontFamily: 'Roboto, sans-serif'
           }
         }
-      },
+      }
     }
   }
-  };
+};
+
+export default config;
+
   
 
 
